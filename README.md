@@ -1,4 +1,4 @@
-# GeoMagic — Creative Color & 3D Geometry Platform
+# polygon-generation — Creative Color & 3D Geometry Platform
 
 > **Portfolio Sample Repository** — This repository contains representative code excerpts and sanitized architecture samples from a production application. It is intended to demonstrate development patterns, code quality, and architectural decisions. Full business logic and proprietary algorithms have been intentionally omitted.
 
@@ -6,7 +6,7 @@
 
 ## 📌 Project Overview
 
-GeoMagic is a full-stack creative platform that lets artists and designers:
+polygon-generation is a full-stack creative platform that lets artists and designers:
 
 - **Analyze images** to extract and manage color palettes
 - **Geometrize images** into geometric primitives (triangles, ellipses, polygons) via a custom Python AI pipeline
@@ -20,10 +20,10 @@ GeoMagic is a full-stack creative platform that lets artists and designers:
 ## 🏗️ Architecture
 
 ```
-geomagic/
-├── geomagic-frontend/        # React + TypeScript SPA (Vite)
-├── geomagic-backend/         # Node.js REST API (Express + MongoDB)
-└── geomagic-python-backend/  # Python AI/Image-processing service (FastAPI)
+polygon-generation/
+├── polygon-generation-frontend/        # React + TypeScript SPA (Vite)
+├── polygon-generation-backend/         # Node.js REST API (Express + MongoDB)
+└── polygon-generation-python-backend/  # Python AI/Image-processing service (FastAPI)
 ```
 
 ### Technology Stack
@@ -42,7 +42,7 @@ geomagic/
 ## 📂 Repository Structure
 
 ```
-geomagic-frontend/
+polygon-generation-frontend/
 ├── src/
 │   ├── App.tsx                        # Root router — embed vs. full layout
 │   ├── store.ts                       # Redux store configuration
@@ -71,7 +71,7 @@ geomagic-frontend/
 │   ├── Provider/                      # Theme context provider
 │   └── Context/                       # React contexts
 │
-geomagic-backend/
+polygon-generation-backend/
 ├── server.js                          # Express app entry + image render endpoint
 ├── router/router.js                   # Route aggregator
 ├── controller/                        # Business-logic handlers
@@ -92,7 +92,7 @@ geomagic-backend/
 ├── validation/joi/                    # Request-body validation schemas
 └── service/                           # Third-party service wrappers
 │
-geomagic-python-backend/
+polygon-generation-python-backend/
 ├── main.py                            # FastAPI app + color analysis endpoints
 ├── geometrize_api.py                  # Shape-primitive generation API
 └── utils/
@@ -148,7 +148,7 @@ Password reset uses a 6-digit OTP sent via SMTP (Nodemailer), verified before al
 
 ### Frontend
 ```bash
-cd geomagic-frontend
+cd polygon-generation-frontend
 npm install
 cp .env.example .env        # fill in API URLs
 npm run dev
@@ -156,7 +156,7 @@ npm run dev
 
 ### Node.js Backend
 ```bash
-cd geomagic-backend
+cd polygon-generation-backend
 npm install
 cp .env.example .env        # fill in DB URL, JWT secret, SMTP
 node server.js
@@ -164,7 +164,7 @@ node server.js
 
 ### Python Backend
 ```bash
-cd geomagic-python-backend
+cd polygon-generation-python-backend
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 uvicorn main:app --reload --port 5000

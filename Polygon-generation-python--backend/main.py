@@ -1,5 +1,5 @@
 """
-GeoMagic Python Service
+polygon-generation Python Service
 =======================
 FastAPI microservice that provides:
   - /geometrize   — convert an image to geometric primitives (SVG / JSON)
@@ -23,7 +23,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 from pydantic import BaseModel
 
-app = FastAPI(title="GeoMagic Python API", version="1.0.0")
+app = FastAPI(title="polygon-generation Python API", version="1.0.0")
 
 # ─── CORS ─────────────────────────────────────────────────────────────────────
 

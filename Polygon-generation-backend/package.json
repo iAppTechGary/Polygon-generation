@@ -1,7 +1,7 @@
 {
-  "name": "geomagic-backend",
+  "name": "polygon-generation-backend",
   "version": "1.0.0",
-  "description": "GeoMagic REST API — Node.js / Express / MongoDB",
+  "description": "polygon-generation REST API — Node.js / Express / MongoDB",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
